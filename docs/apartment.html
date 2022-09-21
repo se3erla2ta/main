@@ -85,7 +85,31 @@ width:100%
 margin: auto;
 }
 
+.pagination {
+  display: inline-block;
+  display:flex;
+     height:100%;
+     width:100%;
+     justify-content:center;
+     align-items:center;
+	background-color: #1b0c0a;
+	color: white;
+	font-size: 24px;
+}
 
+.pagination a {
+  color: white;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pagination a.active {
+  background-color: #72abba;
+  color: white;
+}
+
+.pagination a:hover:not(.active) {background-color: #ddd;}
 
 
 </style>
@@ -345,6 +369,18 @@ Working hours are 9:00 a.m. to 5:00 p.m., Monday to Friday, exclusive of Holiday
 
     </div>
   </footer>
+  
+  
+  <div class="pagination">
+  <a href="apartment10.html">&laquo;</a>
+  <a class="active" href="index.html">1</a>
+  <a href="apartment2.html">2</a>
+  <a href="apartment3.html">3</a>
+  <a href="apartment4.html">4</a>
+  <a href="apartment5.html">5</a>
+  <a href="apartment2.html">&raquo;</a>
+</div>
+  
   
   <div class="w3-black w3-center w3-padding-24">Powered by Google</div>
 
