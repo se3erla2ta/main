@@ -60,7 +60,7 @@ a{
 
 <!-- Sidebar/menu -->
 
-<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:200px;border:1px solid #e5e5e5; display:none; margin-top:53px" id="mySidebar" >
+<nav class="w3-sidebar w3-bar-block w3-white w3-collapse w3-top" style="z-index:3;width:200px;border:1px solid #e5e5e5; display:none; margin-top:43px" id="mySidebar" >
 
   <div class="w3-padding-64 w3-large w3-text-black" style="font-weight:bold;">
 	<a href="index.html" class="w3-button w3-block w3-yellow w3-left-align">MAIN</a>
@@ -98,12 +98,12 @@ a{
   </a>
   </div>
   <!--<a href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right" onclick="w3_open()">MENU</a> -->
-  <p class=" w3-button w3-right" style="margin-top:0px; margin-bottom:0px;  line-height:1.5 " onclick="w3_open()">MENU</p>
+  <p class=" w3-button w3-right" style="margin-top:0px; margin-bottom:0px;  line-height:1; font-size:26px " onclick="w3_open()">MENU</p>
 </header>
 
 
 <!-- Overlay effect when opening sidebar on small screens -->
-<div class="w3-overlay  " onclick="w3_close()" style="cursor:pointer;margin-top:53px; width:100%" title="close side menu" id="myOverlay"></div>
+<div class="w3-overlay  " onclick="w3_close()" style="cursor:pointer;margin-top:43px; width:100%" title="close side menu" id="myOverlay"></div>
 
 <!-- !PAGE CONTENT! -->
 <div class="w3-main" style="margin-left:0px" id="CONTENT">
@@ -261,9 +261,23 @@ Location: Algeria, Bahrain, Egypt, Iraq, Jordan, Kuwait, Lebanon, Morocco, Oman,
 <script>
 // Open and close sidebar
 function w3_open() {
+
+  if (document.getElementById("mySidebar").style.display == "block" ) 
+  {
+	w3_close();
+  }
+  else
+  {
+	w3_open1();
+  }
+}
+
+
+function w3_open1() {
   document.getElementById("mySidebar").style.display = "block";
   document.getElementById("myOverlay").style.display = "block";
   document.getElementById("CONTENT").style.marginLeft = "200px";
+  
 }
  
 function w3_close() {
